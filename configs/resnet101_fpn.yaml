@@ -1,0 +1,12 @@
+# ResNet-101 FPN — heavier backbone, slightly better masks
+# needs more memory so we drop batch size
+
+_base_: base.yaml
+
+model:
+  backbone: resnet101_fpn
+
+training:
+  batch_size: 2
+  epochs: 35
+  lr: 0.0025     # lower lr since effective batch is smaller

@@ -1,0 +1,44 @@
+# data — too big for git
+data/train/
+data/val/
+data/test/
+*.jpg
+*.png
+*.jpeg
+
+# model checkpoints
+results/*.pth
+results/*.pt
+results/*.json
+!results/.gitkeep
+
+# mlflow
+mlruns/
+mlartifacts/
+
+# python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# jupyter
+.ipynb_checkpoints/
+*.ipynb_meta
+
+# env
+.env
+venv/
+.venv/
+
+# os
+.DS_Store
+Thumbs.db
+
+# ide
+.vscode/
+.idea/
+*.swp
+*.swo

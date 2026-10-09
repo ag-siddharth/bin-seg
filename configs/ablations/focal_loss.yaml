@@ -1,0 +1,14 @@
+# ablation: focal loss for the classifier head instead of CE
+# hypothesis: helps with the small/occluded objects that are hard to classify
+
+_base_: ../resnet50_fpn.yaml
+
+loss:
+  type: focal
+  focal_alpha: 0.25
+  focal_gamma: 2.0
+
+training:
+  # focal loss converges differently, give it more time
+  epochs: 35
+  lr: 0.003

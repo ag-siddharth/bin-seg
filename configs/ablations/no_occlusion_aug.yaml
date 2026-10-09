@@ -1,0 +1,7 @@
+# ablation: turn off occlusion synthesis to measure its impact
+# everything else same as r101 baseline
+
+_base_: ../resnet101_fpn.yaml
+
+augmentation:
+  occlusion_synthesis: false

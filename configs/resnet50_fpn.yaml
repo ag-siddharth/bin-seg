@@ -1,0 +1,12 @@
+# ResNet-50 FPN baseline — faster to train, decent results
+# inherits everything from base.yaml
+
+_base_: base.yaml
+
+model:
+  backbone: resnet50_fpn
+
+training:
+  batch_size: 4
+  epochs: 30
+  lr: 0.005
